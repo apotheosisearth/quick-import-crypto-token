@@ -12,19 +12,25 @@ import symbolMap from './symbols'
 
 function App() {
 
+    const [notInstalledAlert, setNotInstalledAlert] = useState(false);
     const [currentChainId, setCurrentChainId] = useState();
 
     useEffect(() => {
-        window.ethereum.request({
-            method: "eth_chainId",
-        }).then((chainId) => {
-            setCurrentChainId(parseInt(chainId, 16));
-            console.log("Chain Init:", chainId, parseInt(chainId, 16))
-        })
-        window.ethereum.on('chainChanged', (_chainId) => {
-            console.log("Chain Change:", _chainId, parseInt(_chainId, 16))
-            setCurrentChainId(parseInt(_chainId, 16));
-        });
+        try {
+            window.ethereum.request({
+                method: "eth_chainId",
+            }).then((chainId) => {
+                setCurrentChainId(parseInt(chainId, 16));
+                console.log("Chain Init:", chainId, parseInt(chainId, 16))
+            })
+            window.ethereum.on('chainChanged', (_chainId) => {
+                console.log("Chain Change:", _chainId, parseInt(_chainId, 16))
+                setCurrentChainId(parseInt(_chainId, 16));
+            });
+        } catch (e) {
+            setNotInstalledAlert(true);
+            console.error(e)
+        }
     }, []);
 
     const importToken = async (symbol) => {
@@ -83,7 +89,11 @@ function App() {
     return (
         <Container className="App">
             {
-                symbolMap[currentChainId] ? (
+                notInstalledAlert ? (
+                    <Alert variant="danger">
+                        Metamask has not been installed.
+                    </Alert>
+                ) : symbolMap[currentChainId] ? (
                     <div>
                         <Row>
                             {symbolList}
