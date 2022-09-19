@@ -25,6 +25,21 @@ const symbolMap = {
             tokenImage: 'https://s2.coinmarketcap.com/static/img/coins/128x128/5745.png'
         }
     ],
+    137: [
+        {
+            tokenSymbol: 'USDT',
+            tokenAddress: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
+            tokenDecimals: 6,
+            tokenImage: 'https://s2.coinmarketcap.com/static/img/coins/128x128/825.png'
+        },
+        {
+            tokenSymbol: 'OSIS',
+            tokenAddress: '0x8303396EA8b5419E187950Ce609ea1F610289912',
+            tokenDecimals: 18,
+            tokenImage: 'https://osis.world/website/assets/images/about-us/about_main.png'
+        },
+    ],
+
     56: [
         {
             tokenSymbol: 'USDT',

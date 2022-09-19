@@ -1,8 +1,8 @@
 {
-  "name": "quick-import-crypto-token",
+  "name": "osis-qict",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dopiz.github.io/quick-import-crypto-token",
+  "homepage": "https://github.com/apotheosisearth/quick-import-crypto-token.git",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
