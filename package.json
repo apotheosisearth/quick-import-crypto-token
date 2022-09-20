@@ -3,20 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "",
+  "paths": {
+    "crypto": [
+      "node_modules/crypto-js"
+    ]
+  },
   "dependencies": {
+    "@coinbase/wallet-sdk": "^3.5.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@walletconnect/web3-provider": "^1.8.0",
     "bootstrap": "^5.2.0",
     "cryptocurrency-icons": "^0.18.0",
+    "ethers": "^5.7.1",
     "gh-pages": "^4.0.0",
-    "netlify-cli": "^11.8.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^4.0.3",
     "web-vitals": "^2.1.4",
-    "web3": "0.18.0"
+    "web3": "0.18.0",
+    "web3modal": "^1.9.9"
   },
   "scripts": {
     "start": "react-scripts start",
