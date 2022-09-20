@@ -190,6 +190,14 @@ const symbolMap = {
             tokenDecimals: 8,
             tokenImage: 'https://assets.coingecko.com/coins/images/21841/large/gst.png?1640332626'
         }
+    ],
+    80001: [
+        {
+            tokenSymbol: 'USDT',
+            tokenAddress: '0xA02f6adc7926efeBBd59Fd43A84f4E0c0c91e832',
+            tokenDecimals: 6,
+            tokenImage: 'https://s2.coinmarketcap.com/static/img/coins/128x128/825.png'
+        },
     ]
 };
 
